@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>IAs Login</title>
-  <link rel="icon" type="image/x-icon" href="../../assets/media/icons/logo_g19.png">
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
-  <meta name="keywords" content="">
-  <meta name="description" content="Front-End del trabajo práctico del curso Full-Stack Python 2023 2C - Codo a Codo">
-  <meta name="author" content="Valentín, Matías, Julián, Mario">
+  <title>Create new IA</title>
+  <link rel="icon" type="image/x-icon" href="../../assets/media/icons/logo_g19.png" />
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="Front-End del trabajo práctico del curso Full-Stack Python 2023 2C - Codo a Codo" />
+  <meta name="author" content="Valentín, Matías, Julián, Mario" />
 
   <link rel="stylesheet" href="../../assets/css/styles.css" />
 </head>
@@ -36,30 +36,37 @@
   </header>
 
   <main>
-    <form id="fLogin" action="" method="post" enctype="text/plain">
-			<fieldset>
-				<legend>Abrir Portfolio para edición</legend>
-				<label for="inputUsernameID">Nombre de Usuario</label>
-				<input type="text" name="username" id="inputUsernameID" size="25" minlength="3" maxlength="30" pattern="/\d+$/g" placeholder="Ingrese su nombre de usuario" required />
-				<!-- aria-placeholder="" value="Pepe None"  -->
-				<p></p> <!-- Mensaje de error a manejar con JS -->
-				
-				<!-- 
-				<label for="email">input type="email"</label>
-				<input type="email" name="email" id="#" size="50" minlength="8" maxlength="50"
-					pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g" placeholder="Ingrese su cuenta de email" />
-				 -->
-					<!-- value="micuenta@midominio.com"  -->
-				<!--<p></p> Mensaje de error a manejar con JS -->
-				
-				<label for="inputClaveID">Contraseña</label>
-				<input type="password" name="password" id="inputClaveID" size="25" minlength="8" maxlength="12" pattern="/\d+$/g"
-					placeholder="Ingrese su clave" />
-				<p></p> <!-- Mensaje de error a manejar con JS -->
-			</fieldset>
-			
-			<button id="btnLogin" name="btnLogin" type="submit">Login</button>
-		</form>
+    <form id="fNewIa" method="post">
+      <fieldset>
+        <legend>Agregar una IA</legend>
+        <label for="nombre">Nombre de la IA</label>
+        <input type="text" name="nombre" id="nombre" size="25" minlength="3" maxlength="50"
+          pattern="[a-zA-Z0-9._%+-]{2,50}" placeholder="Ingrese el nombre de la nueva IA" required />
+        <p></p>
+
+        <label for="urlLink">URL del sitio Web de la IA</label>
+        <input type="url" name="urlLink" id="urlLink" size="50" minlength="8" maxlength="50"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Ingrese la URL de la IA" />
+        <p></p>
+
+        <label for="image">Nombre de archivo de imagen de IA</label>
+        <input type="text" name="nombre" id="nombre" size="25" minlength="3" maxlength="50"
+          pattern="[a-zA-Z0-9._%+-]{2,50}" placeholder="Ingrese el nombre de la nueva IA" required />
+        <label for="listFunction">Lista de funcionalidad de la IA</label>
+        <select multiple name="listFunction" id="listFunction">
+          <option value="1">Arte &amp; Creatividad</option>
+          <option value="2">Conversasionales</option>
+          <option value="3">Diseño</option>
+          <option value="4">Educación</option>
+          <option value="5">Programación</option>
+          <option value="6">Automatización</option>
+          <option value="7">Texto &amp; Traducción</option>
+        </select>
+      </fieldset>
+
+      <button id="btnAgregar" name="btnAgregar" type="button">Agregar</button>
+      <button id="btnCancel" name="btnCancel" type="reset">Cancelar</button>
+    </form>
   </main>
 
   <footer>
@@ -88,15 +95,15 @@
           title="Whatsapp de Mario Lerman"></a>
         <a class="bi bi-github iconRed iconRedG icon tresSeg" href="https://github.com/Marior70" target="_blank"
           title="GitHub"></a>
-      </article>      
+      </article>
       <article>
         <span>Alejo Podbielski</span>
         <a class="bi bi-envelope" href="mailto:valentinpodbielski71@gmail.com?$subject=Contacto%20desde%20IAs list"
           title="Email de Alejo Podbielski"></a>
         <a class="bi bi-whatsapp" href="https://api.whatsapp.com/send?phone=5491162037019" target="_blank"
           title="Whatsapp de Alejo Podbielski"></a>
-        <a class="bi bi-github iconRed iconRedG icon tresSeg" href="https://github.com/Valentinpodbielski" target="_blank"
-          title="GitHub"></a>
+        <a class="bi bi-github iconRed iconRedG icon tresSeg" href="https://github.com/Valentinpodbielski"
+          target="_blank" title="GitHub"></a>
       </article>
       <article>
         <span>Julián Albornoz</span>
@@ -111,6 +118,7 @@
     <img src="../../assets/media/icons/logo_tecno.png" alt="Logo de CSS-3" style="width: 50px;height: 33.5px;">
   </footer>
 
+  <script src="../../assets/js/comments/idxFComment.js" type="module"></script>
   <script src="../../assets/js/index.js"></script>
 </body>
 

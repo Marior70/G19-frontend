@@ -78,6 +78,13 @@
    --color-mail: blue;
    --color-github: black;
 
+   --colorNew: green;
+   --colorNew-a: rgba(0, 255, 0, .7);
+   --colorEdt: blue;
+   --colorEdt-a: rgba(0, 0, 255, .3);
+   --colorDel: red;
+   --colorDel-a: rgba(255, 0, 0, .4);
+
    --sombra-0: 0 2px 5px rgba(0, 212, 170, 0.294), 0 3px 12px rgba(0, 212, 170, 0.5);
    --sombra-1: 0 1px 3px rgba(0, 212, 170, 0.9), 0 2px 5px rgba(0, 212, 170, 0.5);
    --sombra-2: 0 3px 7px rgba(0, 128, 102, 0.945), 0 2px 10px rgba(0, 128, 102, 0.74);
@@ -115,6 +122,53 @@ body {
    overflow: hidden;
 
    background-color: var(--color-10a);
+}
+
+.btnNew {
+   padding: 0 5px;
+   vertical-align: middle;
+   border-radius: 50%;
+   border: none;
+   background-color: var(--colorNew);
+   color: var(--color-6);
+}
+
+.btnNew:hover {
+   cursor: pointer;
+   background-color: var(--colorNew-a);
+   color: var(--color-0);
+}
+
+.btnEdt {
+   padding: 0 2px;
+   border-radius: 50%;
+   border: none;
+   background-color: var(--colorEdt);
+   color: var(--color-6);
+}
+
+.btnEdt:hover {
+   cursor: pointer;
+   background-color: var(--colorEdt-a);
+   color: var(--color-0);
+}
+
+.btnDel {
+   padding: 0 4px;
+   border-radius: 50%;
+   border: none;
+   background-color: var(--colorDel);
+   color: var(--color-6);
+}
+
+.btnDel:hover {
+   cursor: pointer;
+   background-color: var(--colorDel-a);
+   color: var(--color-0);
+}
+
+.oculto{
+   display: none;
 }
 
 /* **** Configuración Responsive **********************************************/

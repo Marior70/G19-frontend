@@ -1,13 +1,16 @@
-import { APIcomments_URI, TOKEN_APIcomments } from "../constantes.js";
+import { APImrl_URI_BASE, TOKEN_APImrl,COMMENTS_SHEET, API_URL } from "../constantes.js";
+
 import { Render } from "../render.js";
 import { commentsToRender } from "./getComments.js";
 
-const comments = new Render("dataList");
-comments.fetchData(APIcomments_URI, 
+const APImrl_URI = `${APImrl_URI_BASE}/${COMMENTS_SHEET}`;
+
+const COMMENTS = new Render("dataList");
+COMMENTS.fetchData(`${API_URL}comment`, 
    commentsToRender, 
    {
       method: 'GET',
-      headers: {
-         'Authorization': `Bearer ${TOKEN_APIcomments}`
-      }      
+      /* headers: {
+         'Authorization': `Bearer ${TOKEN_APImrl}`
+      } */   
    })

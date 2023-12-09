@@ -11,9 +11,9 @@ export function commentsToRender(data) {
       let pattern = `
          <li>
          <article>
-            <!-- <p>${item.contactDate}</p> -->
-            <p>${item.contactName}</p>
-            <p>${item.contactComment}</p>
+            <!-- <p>${item.fecha}</p> -->
+            <p>${item.nombre}</p>
+            <p>${item.comentario}</p>
          </article>
          </li> `;
       items += pattern;
