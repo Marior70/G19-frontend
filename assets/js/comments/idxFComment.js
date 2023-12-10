@@ -4,8 +4,6 @@ import { APImrl_URI_BASE,
          API_URL,
        } from "../constantes.js";
 
-const APImrl_URI = `${APImrl_URI_BASE}/${COMMENTS_SHEET}`;
-
 const btnEnviar = document.querySelector('#btnEnviar');
 const btnCancelar = document.querySelector('#btnCancelar');
 
@@ -14,7 +12,7 @@ btnEnviar.addEventListener('click', async () => {
    const FCOMMENT = document.querySelector('#fComments');
    
    let dataForm = new FormData(FCOMMENT);   
-   dataForm.append('comment_date', new Date().toString());
+   dataForm.append('fecha', new Date().toString());
    /* console.log("dataForm: " + JSON.stringify(dataForm)); */
    
    let comm_request = new XMLHttpRequest();
@@ -34,7 +32,7 @@ btnEnviar.addEventListener('click', async () => {
          }
       }
    };
-   // comm_request.setRequestHeader('Authorization',`Bearer ${TOKEN_APImrl}`);
+   // comm_request.setRequestHeader('Authorization',`Bearer ${TOKEN_API}`);
    comm_request.send(dataForm);
 });
 

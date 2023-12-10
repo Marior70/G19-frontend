@@ -11,7 +11,7 @@ export function commentsToRender(data) {
       let pattern = `
          <li>
          <article>
-            <!-- <p>${item.fecha}</p> -->
+            <p>${item.fecha}</p>
             <p>${item.nombre}</p>
             <p>${item.comentario}</p>
          </article>

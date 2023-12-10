@@ -11,6 +11,6 @@ COMMENTS.fetchData(`${API_URL}comment`,
    {
       method: 'GET',
       /* headers: {
-         'Authorization': `Bearer ${TOKEN_APImrl}`
+         'Authorization': `Bearer ${TOKEN_API}`
       } */   
-   })
+   });

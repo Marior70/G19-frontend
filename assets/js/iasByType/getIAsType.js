@@ -1,15 +1,21 @@
-export function obtenerIAsType(data) {
+import { API_URL } from "../constantes.js";
 
-   let items = "";
+export async function obtenerIATypeList() {
+   const IATypeListPromise = fetch(`${API_URL}iaFunction/`, {
+      method: 'GET',
+      // headers: {
+      //  'Authorization': `Bearer ${TOKEN_API}`
+      // } 
+   })
+      .then((res) => res.json())
+      .catch(error => {
+         console.error('Error:', error);
+      });
 
-   if (!data) {
-      console.log("la lista de iasType recibidos se encuentra vacía");
-      return;
+   try {
+      const IATypeList = await IATypeListPromise;
+      return IATypeList;
+   } catch (error) {
+      console.error('Error:', error);
    }
-
-      return ;
-}
-
-
-/* FALTA DESARROLLAR */
-
+};

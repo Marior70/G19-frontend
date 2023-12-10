@@ -26,13 +26,19 @@
 }
 
 #commentsList article>p:nth-child(1) {
-   font-size: var(--font-2);
+   font-size: var(--font-1);
+   color: var(--color-2);
+   flex: 1;
+}
+
+#commentsList article>p:nth-child(2) {
+   font-size: var(--font-1);
    font-weight: bold;
    color: var(--color-1);
    flex: 1;
 }
 
-#commentsList article>p:nth-child(2) {
+#commentsList article>p:nth-child(3) {
    font-size: var(--font-1);
    color: var(--color-2);
    flex: 3;
@@ -64,13 +70,19 @@
    }
 
    #commentsList article>p:nth-child(1) {
+      font-size: var(--font-3);
+      color: var(--color-2);
+      flex: 1;
+   }
+
+   #commentsList article>p:nth-child(2) {
       font-size: var(--font-4);
       font-weight: bold;
       color: var(--color-1);
       flex: 1;
    }
 
-   #commentsList article>p:nth-child(2) {
+   #commentsList article>p:nth-child(3) {
       font-size: var(--font-3);
       color: var(--color-2);
       flex: 3;
