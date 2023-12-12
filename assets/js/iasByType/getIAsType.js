@@ -1,4 +1,4 @@
-import { API_URL } from "../constantes.js";
+/* import { API_URL } from "../constantes.js";
 
 export async function obtenerIATypeList() {
    const IATypeListPromise = fetch(`${API_URL}iaFunction/`, {
@@ -18,4 +18,4 @@ export async function obtenerIATypeList() {
    } catch (error) {
       console.error('Error:', error);
    }
-};
+}; */

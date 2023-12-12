@@ -14,24 +14,19 @@ async function obtenerIATypeList() {
 
    try {
       const IATypeList = await IATypeListPromise;
-      // console.log(IATypeList);
       return IATypeList;
    } catch (error) {
       console.error('Error:', error);
    }
-}
+} 
 
+export const IATypeList = obtenerIATypeList();
 
 export function obtenerIAsByType(data) {
 
    let items = "";
    let iaTypeStartPattern = "";
-   let iaType = {};
-   let iaFunctionID;
-
-   const IATypeList = obtenerIATypeList();
-
-   console.log(IATypeList);
+   let iaFunctionID;   
 
    if (!data) {
       console.log("la lista de IAs se encuentra vacía");
@@ -41,7 +36,7 @@ export function obtenerIAsByType(data) {
    const iaTypeEndPattern = `  </ul>
       </article>`;
    
-   for (iaType in IATypeList)
+   for (let iaType of IATypeList){
       iaTypeStartPattern = `
          <article class="byFunction">
             <header>
@@ -49,25 +44,23 @@ export function obtenerIAsByType(data) {
                <img src="${iaType.image}" width="50">
             </header>
             <ul id="iaList">`;
-   items += iaTypeStartPattern
-
-   console.log(items);
-
-   data.forEach((item) => {
-
-      let itemPattern = "";
-      for (iaFunctionID in item.functionList)
-         if (iaFunctionID == iaType.id) {
-            itemPattern = `
+      items += iaTypeStartPattern;
+      data.forEach((item) => {
+         let itemPattern = "";
+         for (iaFunctionID in item.functionList){
+            if (iaFunctionID == iaType.id) {
+               itemPattern = `
                   < li >
                      <a href="${item.link}" target="_blank">
-                     <img src="${item.image}" title="${item.nombre} alt="${item.nombre} site">
+                        <img src="${item.image}" title="${item.nombre} alt="${item.nombre} site">
+                     </a>
                   </li>`;
+            }
          }
-      items += itemPattern;
-   });
-   items += iaTypeEndPattern;
+         items += itemPattern;
+      });
+      items += iaTypeEndPattern;
 
-   console.log(items);
-   return items;
-};
+      return items;
+   }
+}
