@@ -4,7 +4,7 @@ export async function obtenerIATypeList() {
    const IATypeListPromise = fetch(`${API_URL}iaFunction/`, {
       method: 'GET',
       headers: {
-         'Origin': '`${FRONTEND}`',
+         'Origin': `'${FRONTEND}'`,
          // 'Authorization': `Bearer ${TOKEN_API}`
       }
    })

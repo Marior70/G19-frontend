@@ -8,7 +8,7 @@ obtenerIAsList,
    {
       method: 'GET',
       headers: {
-         'Origin': '`${FRONTEND}`',
+         'Origin': `'${FRONTEND}'`,
          // 'Authorization': `Bearer ${TOKEN_API}`
       }  
    });

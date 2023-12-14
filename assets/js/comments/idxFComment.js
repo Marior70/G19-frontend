@@ -28,7 +28,7 @@ btnEnviar.addEventListener('click', async () => {
       }
    };
    comm_request.setRequestHeader(
-      'Origin', '`${FRONTEND}`'
+      'Origin', `'${FRONTEND}'`
       // 'Authorization',`Bearer ${TOKEN_API}`
    );
    comm_request.send(dataForm);
