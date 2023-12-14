@@ -1,29 +1,27 @@
 import { API_URL } from "../constantes.js";
 
-const btnEnviar = document.querySelector('#btnEnviar');
-const btnCancelar = document.querySelector('#btnCancelar');
+const btnEnviar = document.querySelector('#btnNewIA');
+const btnCancelar = document.querySelector('#btnCancelarNewIA');
 
 btnEnviar.addEventListener('click', async () => {
    
-   const FCOMMENT = document.querySelector('#fComments');
+   const FNEW_IA = document.querySelector('#fNewIa');
    
-   let dataForm = new FormData(FCOMMENT);   
-   dataForm.append('fecha', new Date().toString());
-      
+   let dataForm = new FormData(FNEW_IA);   
    let comm_request = new XMLHttpRequest();
    
-   comm_request.open("POST", `${API_URL}comment/`, true);
+   comm_request.open("POST", `${API_URL}iaslist/`, true);
 
    comm_request.onreadystatechange = function () {
       if (comm_request.readyState === 4) {
          if (comm_request.status === 201) {
             document.getElementById("nombre").value = '';
-            document.getElementById("email").value = '';
-            document.getElementById("comentario").value = '';
-            alert("Gracias por sus comentarios");
+            document.getElementById("image").value = '';
+            document.getElementById("link").value = '';
+            alert("IA creada correctamente");
             window.history.back();
          } else {
-            console.error("Error al enviar comentarios: " + comm_request.status);
+            console.error("Error al crear nueva IA: " + comm_request.status);
          }
       }
    };

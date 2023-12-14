@@ -38,3 +38,7 @@
 1. JS
 2. JSON
 3. Vue (opcional)
+*** 
+	Finalmente, una vez implementada la API rest del Proyecto y la base de datos
+	mySQL, migraremos todas las fuentes del front para que sean obtenidas a 
+	través de dicha API Rest.

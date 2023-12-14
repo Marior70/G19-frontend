@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Create new IA</title>
+  <title>Edit IA</title>
   <link rel="icon" type="image/x-icon" href="../../assets/media/icons/logo_g19.png" />
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
   <meta name="keywords" content="" />
@@ -36,9 +36,10 @@
   </header>
 
   <main>
-    <form id="fNewIa" method="post">
+    <form id="fNewIa" method="put">
       <fieldset>
         <legend>Agregar una IA</legend>
+        <input type="text" name="id" id="id" />
         <label for="nombre">Nombre de la IA</label>
         <input type="text" name="nombre" id="nombre" size="25" minlength="3" maxlength="50"
           pattern="[a-zA-Z0-9._%+-]{2,50}" placeholder="Ingrese el nombre de la nueva IA" required />
@@ -64,7 +65,7 @@
         </select>
       </fieldset>
 
-      <button id="btnAgregar" name="btnAgregarIA" type="button">Agregar</button>
+      <button id="btnAgregar" name="btnEdtIA" type="button">Editar</button>
       <button id="btnCancel" name="btnCancel" type="reset">Cancelar</button>
     </form>
   </main>

@@ -17,6 +17,7 @@ export function obtenerIAsList(data) {
                      <b>X</b>
                </button>
             </div>
+            <p class="oculto">"${item.id}"
          <a href="${item.link}" target="_blank">
          <img src="${item.image}" title= "${item.nombre}" alt="${item.nombre} site">
          </li>`;
