@@ -7,7 +7,8 @@ iasByFunction.fetchData(`${API_URL}iaFunction/`,
 obtenerIAsByType, 
 {
    method: 'GET',
-   // headers: {
-   //   'Authorization': `Bearer ${TOKEN_API}`
-   //}    
+   headers: {
+      'Origin': `${FRONTEND}`,
+      // 'Authorization': `Bearer ${TOKEN_API}`
+   }    
 });

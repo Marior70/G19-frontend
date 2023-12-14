@@ -27,7 +27,10 @@ btnEnviar.addEventListener('click', async () => {
          }
       }
    };
-   // comm_request.setRequestHeader('Authorization',`Bearer ${TOKEN_API}`);
+   comm_request.setRequestHeader(
+      'Origin', `${FRONTEND}`
+      // 'Authorization',`Bearer ${TOKEN_API}`
+   );
    comm_request.send(dataForm);
 });
 

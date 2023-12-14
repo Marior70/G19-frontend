@@ -3,9 +3,10 @@
 export async function obtenerIATypeList() {
    const IATypeListPromise = fetch(`${API_URL}iaFunction/`, {
       method: 'GET',
-      // headers: {
-      //  'Authorization': `Bearer ${TOKEN_API}`
-      // } 
+      headers: {
+         'Origin': `${FRONTEND}`,
+         // 'Authorization': `Bearer ${TOKEN_API}`
+      }
    })
       .then((res) => res.json())
       .catch(error => {

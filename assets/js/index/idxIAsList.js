@@ -7,7 +7,8 @@ ias.fetchData(`${API_URL}iasList/`,
 obtenerIAsList,
    {
       method: 'GET',
-      /* headers: {
-         'Authorization': `Bearer ${TOKEN_API}`
-      } */   
+      headers: {
+         'Origin': `${FRONTEND}`,
+         // 'Authorization': `Bearer ${TOKEN_API}`
+      }  
    });
