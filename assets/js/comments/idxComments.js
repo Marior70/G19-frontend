@@ -1,4 +1,4 @@
-import { APImrl_URI_BASE, TOKEN_APImrl,COMMENTS_SHEET, API_URL } from "../constantes.js";
+import { API_URL } from "../constantes.js";
 
 import { Render } from "../render.js";
 import { commentsToRender } from "./getComments.js";
