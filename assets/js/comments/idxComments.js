@@ -3,8 +3,6 @@ import { API_URL } from "../constantes.js";
 import { Render } from "../render.js";
 import { commentsToRender } from "./getComments.js";
 
-const APImrl_URI = `${APImrl_URI_BASE}/${COMMENTS_SHEET}`;
-
 const COMMENTS = new Render("dataList");
 COMMENTS.fetchData(`${API_URL}comment`, 
    commentsToRender, 
